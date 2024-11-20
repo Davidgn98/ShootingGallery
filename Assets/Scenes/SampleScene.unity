@@ -449,6 +449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 595018869}
+  - component: {fileID: 595018870}
   m_Layer: 0
   m_Name: Teatro
   m_TagString: Untagged
@@ -486,6 +487,19 @@ Transform:
   - {fileID: 1250248639}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &595018870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595018868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c900c421f11f91849bca13edba91ba62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _patoPrefab: {fileID: 3690209734280224107, guid: 7fd50c2700887364481763e8d4736776, type: 3}
 --- !u!1 &619723396
 GameObject:
   m_ObjectHideFlags: 0
@@ -1532,9 +1546,10 @@ GameObject:
   - component: {fileID: 1716683217}
   - component: {fileID: 1716683216}
   - component: {fileID: 1716683215}
+  - component: {fileID: 1716683218}
   m_Layer: 0
   m_Name: Wave1
-  m_TagString: Untagged
+  m_TagString: Wave1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1547,9 +1562,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716683213}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.70710677, z: -0.70710677, w: 0}
-  m_LocalPosition: {x: 0, y: -0.72, z: -7}
-  m_LocalScale: {x: 1, y: 1, z: 0.15}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: 0, y: -0.7199998, z: -7}
+  m_LocalScale: {x: 1, y: 1, z: 0.14999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 595018869}
@@ -1626,6 +1641,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716683213}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1716683218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716683213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462cfaa3c485472429f5c443c51a8dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1
+  _range: 1
+  dirIni: 1
 --- !u!1 &1829089791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1744,9 +1774,10 @@ GameObject:
   - component: {fileID: 1860359728}
   - component: {fileID: 1860359727}
   - component: {fileID: 1860359726}
+  - component: {fileID: 1860359729}
   m_Layer: 0
   m_Name: Wave2
-  m_TagString: Untagged
+  m_TagString: Wave2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1838,6 +1869,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860359724}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1860359729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860359724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462cfaa3c485472429f5c443c51a8dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1
+  _range: 1
+  dirIni: 0
 --- !u!1 &1888426482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1850,9 +1896,10 @@ GameObject:
   - component: {fileID: 1888426486}
   - component: {fileID: 1888426485}
   - component: {fileID: 1888426484}
+  - component: {fileID: 1888426487}
   m_Layer: 0
   m_Name: Wave3
-  m_TagString: Untagged
+  m_TagString: Wave3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1944,6 +1991,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888426482}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1888426487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888426482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462cfaa3c485472429f5c443c51a8dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1
+  _range: 1
+  dirIni: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
