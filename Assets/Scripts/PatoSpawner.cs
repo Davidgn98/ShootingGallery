@@ -34,12 +34,13 @@ public class PatoSpawner : MonoBehaviour
         {
             if(randomDirection == 0)
             {
-                Instantiate(_patoPrefab, _wave1.transform.position + new Vector3(0, 0, 0.5f), _wave1.transform.rotation);
+                Instantiate(_patoPrefab, _wave1.transform.position + new Vector3(-2f,0,0), _wave1.transform.rotation);
+                _patoPrefab.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
             }
             else
             {
-                Instantiate(_patoPrefab, _wave1.transform.position + new Vector3(0, 0, 0.5f), _wave1.transform.rotation);
-                _patoPrefab.transform.localScale = new Vector3(-0.1f, 0, 0);
+                Instantiate(_patoPrefab, _wave1.transform.position + new Vector3(2f, 0, 0), _wave1.transform.rotation);
+                _patoPrefab.transform.localScale = new Vector3(-0.1f, 0.1f, 0.1f);
             }
 
         }
@@ -47,24 +48,26 @@ public class PatoSpawner : MonoBehaviour
         {
             if (randomDirection == 0)
             {
-                Instantiate(_patoPrefab, _wave2.transform.position + new Vector3(0, 0, 0.5f), _wave2.transform.rotation);
+                Instantiate(_patoPrefab, _wave2.transform.position + new Vector3(-2f, 0, 0), _wave2.transform.rotation);
+                _patoPrefab.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
             }
             else
             {
-                Instantiate(_patoPrefab, _wave2.transform.position + new Vector3(0, 0, 0.5f), _wave2.transform.rotation);
-                _patoPrefab.transform.localScale = new Vector3(-0.1f, 0, 0);
+                Instantiate(_patoPrefab, _wave2.transform.position + new Vector3(2f, 0, 0), _wave2.transform.rotation);
+                _patoPrefab.transform.localScale = new Vector3(-0.1f, 0.1f, 0.1f);
             }
         }
         if (randomSpawn == 3)
         {
             if (randomDirection == 0)
             {
-                Instantiate(_patoPrefab, _wave3.transform.position + new Vector3(0, 0, 0.5f), _wave3.transform.rotation);
+                Instantiate(_patoPrefab, _wave3.transform.position + new Vector3(-2f, 0, 0), _wave3.transform.rotation);
+                _patoPrefab.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
             }
             else
             {
-                Instantiate(_patoPrefab, _wave3.transform.position + new Vector3(0, 0, 0.5f), _wave3.transform.rotation);
-                _patoPrefab.transform.localScale = new Vector3(-0.1f, 0, 0);
+                Instantiate(_patoPrefab, _wave3.transform.position + new Vector3(2f, 0, 0), _wave3.transform.rotation);
+                _patoPrefab.transform.localScale = new Vector3(-0.1f, 0.1f, 0.1f);
             }
         }
     }
