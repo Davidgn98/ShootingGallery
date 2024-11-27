@@ -1655,6 +1655,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 1
   _range: 1
+  material: {fileID: 2100000, guid: 17ba0a4a6096b2143be56e616c2f0493, type: 2}
+  offsetX: 0
+  offsetY: 0
+  offset: {x: 0, y: 0}
   dirIni: 1
 --- !u!1 &1829089791
 GameObject:
@@ -1883,6 +1887,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 1
   _range: 1
+  material: {fileID: 2100000, guid: 505c9a5b25ccaad4abcde385f866c30d, type: 2}
+  offsetX: 0
+  offsetY: 0
+  offset: {x: 0, y: 0}
   dirIni: 0
 --- !u!1 &1888426482
 GameObject:
@@ -2005,6 +2013,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 1
   _range: 1
+  material: {fileID: 2100000, guid: 17ba0a4a6096b2143be56e616c2f0493, type: 2}
+  offsetX: 0
+  offsetY: 0
+  offset: {x: 0, y: 0}
   dirIni: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
