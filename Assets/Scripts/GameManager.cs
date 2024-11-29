@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -12,6 +13,8 @@ public class GameManager : MonoBehaviour
     public float remainingTime;
     private int randomDirection;
     private int randomSpawn;
+    public TMP_Text guiScore;
+    public TMP_Text guiTime;
     public enum GameStates
     {
         Start,
@@ -60,12 +63,13 @@ public class GameManager : MonoBehaviour
         // Set the onEnterState variable to false to only call once the corrutine
         float currentTime = 0f;
         onEnterState = false;
-        float spawnTime = Random.Range(0.5f, 1f); 
+        float spawnTime = Random.Range(1f, 3f); 
         while (remainingTime > 0f)
         {
             // Decrease remainingTime
             remainingTime -= Time.deltaTime;
             currentTime += Time.deltaTime;
+            guiTime.text = "Time: " + remainingTime.ToString("F1");
             if (currentTime >= spawnTime)
             {
                 int numPatos = Random.Range(1, 4);

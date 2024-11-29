@@ -16,7 +16,7 @@ public class PatoSpawner : MonoBehaviour
         _wave1 = GameObject.FindWithTag("Wave1");
         _wave2 = GameObject.FindWithTag("Wave2");
         _wave3 = GameObject.FindWithTag("Wave3");
-        InvokeRepeating("SpawnPato", 2f, 3f);
+        InvokeRepeating("SpawnPato", 2f, 5f);
     }
 
     // Update is called once per frame
