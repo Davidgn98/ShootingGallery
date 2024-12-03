@@ -6,7 +6,10 @@ public class BulletController : MonoBehaviour
 {
 
     private Vector3 speed = new Vector3(0f, 0f, 10f);
-
+    void Start()
+    {
+        Destroy(gameObject,3f);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -18,8 +21,12 @@ public class BulletController : MonoBehaviour
         this.speed = speed;
     }
 
-    public void OnTriggerEnter(Collider other)
+    /*public void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
-    }
+        if(other.gameObject.tag == "Pato")
+        {
+            Destroy(other.gameObject);
+        }
+        //Destroy(gameObject);
+    }*/
 }

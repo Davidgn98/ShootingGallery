@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set; }
     [SerializeField] private GameObject _patoPrefab;
     private GameObject _wave1;
     private GameObject _wave2;
@@ -15,6 +16,8 @@ public class GameManager : MonoBehaviour
     private int randomSpawn;
     public TMP_Text guiScore;
     public TMP_Text guiTime;
+    private int gameScore;
+
     public enum GameStates
     {
         Start,
@@ -24,6 +27,21 @@ public class GameManager : MonoBehaviour
     }
 
     public GameStates state;
+
+    private void Awake()
+    {
+        // Comprobar si ya existe una instancia de esta clase
+        if (Instance == null)
+        {
+            // Si no existe, asignar esta instancia y mantenerla entre escenas
+            Instance = this;
+        }
+        else
+        {
+            // Si ya existe otra instancia, destruir este objeto para asegurar que solo hay uno
+            Destroy(gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -63,7 +81,7 @@ public class GameManager : MonoBehaviour
         // Set the onEnterState variable to false to only call once the corrutine
         float currentTime = 0f;
         onEnterState = false;
-        float spawnTime = Random.Range(1f, 3f); 
+        float spawnTime = Random.Range(1, 3); 
         while (remainingTime > 0f)
         {
             // Decrease remainingTime
@@ -74,7 +92,7 @@ public class GameManager : MonoBehaviour
             {
                 int numPatos = Random.Range(1, 4);
                 SpawnPato(numPatos);
-                spawnTime = currentTime + Random.Range(1f, 3f);
+                spawnTime = currentTime + Random.Range(3, 5);
             }
             
             // Suspend corrutine until next frame
@@ -132,5 +150,10 @@ public class GameManager : MonoBehaviour
             }
         }
         
+    }
+    public void UpdateScore(int points)
+    {
+        gameScore += points;
+        guiScore.text = "Score: " + gameScore.ToString();
     }
 }

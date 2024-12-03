@@ -70,4 +70,13 @@ public class PatoMovement : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Bala")
+        {
+            GameManager.Instance.UpdateScore(1);
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }     
+    }
 }
