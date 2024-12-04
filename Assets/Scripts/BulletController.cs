@@ -20,13 +20,4 @@ public class BulletController : MonoBehaviour
     {
         this.speed = speed;
     }
-
-    /*public void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "Pato")
-        {
-            Destroy(other.gameObject);
-        }
-        //Destroy(gameObject);
-    }*/
 }

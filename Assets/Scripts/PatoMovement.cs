@@ -10,6 +10,7 @@ public class PatoMovement : MonoBehaviour
     [SerializeField] private float _rangeY;
     private Vector3 _posIni;
     private Vector3 scale;
+    public GameObject explosion;
 
     // Start is called before the first frame update
     void Start()
@@ -75,8 +76,9 @@ public class PatoMovement : MonoBehaviour
         if (other.gameObject.tag == "Bala")
         {
             GameManager.Instance.UpdateScore(1);
-            Destroy(gameObject);
+            Instantiate(explosion, other.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
+            Destroy(gameObject);
         }     
     }
 }

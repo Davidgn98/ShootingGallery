@@ -52,7 +52,7 @@ public class CrossHairController : MonoBehaviour
     public void OnDisable()
     {
         // Show mouse cursor
-        //Cursor.visible = true;
+        Cursor.visible = true;
     }
 
 }

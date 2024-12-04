@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,8 +16,11 @@ public class GameManager : MonoBehaviour
     private int randomDirection;
     private int randomSpawn;
     public TMP_Text guiScore;
+    public TMP_Text guiFinalScore;
     public TMP_Text guiTime;
     private int gameScore;
+    public GameObject uiHUD;
+    public GameObject uiEndMenu;
 
     public enum GameStates
     {
@@ -48,6 +52,9 @@ public class GameManager : MonoBehaviour
     {
         // Start in playing state to test spawn enemies
         state = GameStates.Playing;
+        uiHUD.SetActive(true);
+        uiEndMenu.SetActive(false);
+        gameScore = 0;
         _wave1 = GameObject.FindWithTag("Wave1");
         _wave2 = GameObject.FindWithTag("Wave2");
         _wave3 = GameObject.FindWithTag("Wave3");
@@ -98,6 +105,9 @@ public class GameManager : MonoBehaviour
             // Suspend corrutine until next frame
             yield return null;
         }
+        uiHUD.SetActive(false);
+        uiEndMenu.SetActive(true);
+        guiFinalScore.text = gameScore.ToString();
         onEnterState = true;
         state = GameStates.End;
     }
@@ -155,5 +165,9 @@ public class GameManager : MonoBehaviour
     {
         gameScore += points;
         guiScore.text = "Score: " + gameScore.ToString();
+    }
+    public void LoadMainMenu(string scene)
+    {
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
     }
 }

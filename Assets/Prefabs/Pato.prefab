@@ -123,4 +123,5 @@ MonoBehaviour:
   _speedY: 1
   _rangeX: 3.5
   _rangeY: 0.8
+  explosion: {fileID: 180128, guid: d67b6e2117110cc4cbb82ddfcaa4f7e5, type: 3}
   state: 0
