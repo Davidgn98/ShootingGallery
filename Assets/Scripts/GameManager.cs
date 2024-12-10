@@ -58,6 +58,10 @@ public class GameManager : MonoBehaviour
         _wave1 = GameObject.FindWithTag("Wave1");
         _wave2 = GameObject.FindWithTag("Wave2");
         _wave3 = GameObject.FindWithTag("Wave3");
+        AudioManager.instance.StopMusic("Start");
+        AudioManager.instance.PlayMusic("Stage1");
+        AudioManager.instance.PlayFx("Ready");
+        InvokeRepeating("PlayFxSecond", 1.3f,0f);
     }
     void Update()
     {
@@ -169,5 +173,10 @@ public class GameManager : MonoBehaviour
     public void LoadMainMenu(string scene)
     {
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
+    }
+
+    private void PlayFxSecond()
+    {
+        AudioManager.instance.PlayFx("Go");
     }
 }

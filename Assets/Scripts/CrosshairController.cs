@@ -24,7 +24,7 @@ public class CrossHairController : MonoBehaviour
         // Get right click on mouse
         if (Input.GetMouseButtonDown(0))
         {
-
+            AudioManager.instance.PlayFx("Shoot");
             // Raycasting fron camera through the crosshair
             Ray ray = Camera.main.ScreenPointToRay(transform.position);
             RaycastHit castHit;
