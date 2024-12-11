@@ -1416,7 +1416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _patoPrefab: {fileID: 3690209734280224107, guid: 7fd50c2700887364481763e8d4736776, type: 3}
-  remainingTime: 30
+  remainingTime: 5
   guiScore: {fileID: 1207282432}
   guiFinalScore: {fileID: 1174912418}
   guiTime: {fileID: 2105925727}
@@ -2428,7 +2428,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score:'
+  m_text: 'Score: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 335a7942aec89854491e5f248f2e7953, type: 2}
   m_sharedMaterial: {fileID: -3154015869505588954, guid: 335a7942aec89854491e5f248f2e7953, type: 2}
@@ -3844,62 +3844,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5189847352973264170, guid: c20101f67afbf494fb815f3d54dc2c81, type: 3}
-      propertyPath: fx.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5189847352973264170, guid: c20101f67afbf494fb815f3d54dc2c81, type: 3}
-      propertyPath: fxAudioMixerGroup
-      value: 
-      objectReference: {fileID: 7326113982174580283, guid: 224579c25850125448f908e15adc822b, type: 2}
-    - target: {fileID: 5189847352973264170, guid: c20101f67afbf494fb815f3d54dc2c81, type: 3}
-      propertyPath: fx.Array.data[0].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
-    - target: {fileID: 5189847352973264170, guid: c20101f67afbf494fb815f3d54dc2c81, type: 3}
-      propertyPath: fx.Array.data[0].name
-      value: Shoot
-      objectReference: {fileID: 0}
-    - target: {fileID: 5189847352973264170, guid: c20101f67afbf494fb815f3d54dc2c81, type: 3}
-      propertyPath: fx.Array.data[1].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 7e8aba738d42d4e42918611b8573dd82, type: 3}
-    - target: {fileID: 5189847352973264170, guid: c20101f67afbf494fb815f3d54dc2c81, type: 3}
-      propertyPath: fx.Array.data[1].name
-      value: Ready
-      objectReference: {fileID: 0}
-    - target: {fileID: 5189847352973264170, guid: c20101f67afbf494fb815f3d54dc2c81, type: 3}
-      propertyPath: fx.Array.data[2].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 9a6bfbb5de44f9043ad1c6af02ecb2b5, type: 3}
-    - target: {fileID: 5189847352973264170, guid: c20101f67afbf494fb815f3d54dc2c81, type: 3}
-      propertyPath: fx.Array.data[2].name
-      value: Go
-      objectReference: {fileID: 0}
-    - target: {fileID: 5189847352973264170, guid: c20101f67afbf494fb815f3d54dc2c81, type: 3}
-      propertyPath: fx.Array.data[0].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5189847352973264170, guid: c20101f67afbf494fb815f3d54dc2c81, type: 3}
-      propertyPath: fx.Array.data[1].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5189847352973264170, guid: c20101f67afbf494fb815f3d54dc2c81, type: 3}
-      propertyPath: fx.Array.data[2].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5189847352973264170, guid: c20101f67afbf494fb815f3d54dc2c81, type: 3}
-      propertyPath: fx.Array.data[0].volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5189847352973264170, guid: c20101f67afbf494fb815f3d54dc2c81, type: 3}
-      propertyPath: fx.Array.data[1].volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5189847352973264170, guid: c20101f67afbf494fb815f3d54dc2c81, type: 3}
-      propertyPath: fx.Array.data[2].volume
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8984549492818139416, guid: c20101f67afbf494fb815f3d54dc2c81, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -3966,7 +3910,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Time:'
+  m_text: 'Time: 30,0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 335a7942aec89854491e5f248f2e7953, type: 2}
   m_sharedMaterial: {fileID: -3154015869505588954, guid: 335a7942aec89854491e5f248f2e7953, type: 2}

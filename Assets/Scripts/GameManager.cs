@@ -113,6 +113,7 @@ public class GameManager : MonoBehaviour
         uiEndMenu.SetActive(true);
         guiFinalScore.text = gameScore.ToString();
         onEnterState = true;
+        AudioManager.instance.PlayFx("TimeOver");
         state = GameStates.End;
     }
 
@@ -172,6 +173,7 @@ public class GameManager : MonoBehaviour
     }
     public void LoadMainMenu(string scene)
     {
+        AudioManager.instance.StopMusic("Stage1");
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
     }
 

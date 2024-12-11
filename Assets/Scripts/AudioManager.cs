@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.Audio;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class AudioManager : MonoBehaviour
@@ -20,6 +22,9 @@ public class AudioManager : MonoBehaviour
     public float fxVolume = 0.5f;
 
     public Sound[] fx;
+
+    public Slider musicSlider;
+    public Slider fxSlider;
 
     void Awake()
     {
@@ -69,12 +74,27 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        mainAudioMixer.SetFloat("MusicVolume", Mathf.Log10(musicVolume) * 20);
-        mainAudioMixer.SetFloat("FxVolume", Mathf.Log10(fxVolume) * 20);
+        //mainAudioMixer.SetFloat("MusicVolume", Mathf.Log10(musicVolume) * 20);
+        //mainAudioMixer.SetFloat("FxVolume", Mathf.Log10(fxVolume) * 20);
     }
     // Update is called once per frame
     void Update()
     {
+        if(SceneManager.GetSceneByName("MainMenu").isLoaded)
+        {
+            if(GameObject.FindGameObjectWithTag("SliderMusic"))
+            {
+                musicSlider = (Slider)GameObject.FindObjectsOfType(typeof(Slider))[0];
+                fxSlider = (Slider)GameObject.FindObjectsOfType(typeof(Slider))[1];
+                mainAudioMixer.SetFloat("MusicVolume", Mathf.Log10(musicSlider.value) * 20);
+                mainAudioMixer.SetFloat("FxVolume", Mathf.Log10(musicSlider.value) * 20);
+            }
+            else
+            {
+                print("xd");
+            }
+
+        }
         // To test the musicVolume variable
         //mainAudioMixer.SetFloat("MusicVolume", Mathf.Log10(musicVolume) * 20);
     }

@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainAudioMixer: {fileID: 24100000, guid: 224579c25850125448f908e15adc822b, type: 2}
   musicAudioMixerGroup: {fileID: -3053310924664214397, guid: 224579c25850125448f908e15adc822b, type: 2}
+  fxAudioMixerGroup: {fileID: 7326113982174580283, guid: 224579c25850125448f908e15adc822b, type: 2}
   music:
   - name: Start
     clip: {fileID: 8300000, guid: b6c344701dcb94e44a15beb7adf39d1b, type: 3}
@@ -60,4 +61,37 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   musicVolume: 0.5
-  fx: []
+  fxVolume: 0.5
+  fx:
+  - name: Shoot
+    clip: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ready
+    clip: {fileID: 8300000, guid: 7e8aba738d42d4e42918611b8573dd82, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Go
+    clip: {fileID: 8300000, guid: 9a6bfbb5de44f9043ad1c6af02ecb2b5, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: TimeOver
+    clip: {fileID: 8300000, guid: e5202688a39cb3242beb809bfaa1fb47, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DuckHit
+    clip: {fileID: 8300000, guid: 19f89c6e740e7447f9e12a8310d3e973, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  musicSlider: {fileID: 0}
+  fxSlider: {fileID: 0}

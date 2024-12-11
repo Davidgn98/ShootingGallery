@@ -75,6 +75,7 @@ public class PatoMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "Bala")
         {
+            AudioManager.instance.PlayFx("DuckHit");
             GameManager.Instance.UpdateScore(1);
             Instantiate(explosion, other.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
