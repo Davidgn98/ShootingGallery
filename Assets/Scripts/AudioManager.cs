@@ -26,6 +26,8 @@ public class AudioManager : MonoBehaviour
     public Slider musicSlider;
     public Slider fxSlider;
 
+    private bool firstTime;
+
     void Awake()
     {
         if (instance == null)
@@ -74,6 +76,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        setVolume();
         //mainAudioMixer.SetFloat("MusicVolume", Mathf.Log10(musicVolume) * 20);
         //mainAudioMixer.SetFloat("FxVolume", Mathf.Log10(fxVolume) * 20);
     }
@@ -87,19 +90,25 @@ public class AudioManager : MonoBehaviour
                 musicSlider = (Slider)GameObject.FindObjectsOfType(typeof(Slider))[0];
                 fxSlider = (Slider)GameObject.FindObjectsOfType(typeof(Slider))[1];
                 mainAudioMixer.SetFloat("MusicVolume", Mathf.Log10(musicSlider.value) * 20);
-                mainAudioMixer.SetFloat("FxVolume", Mathf.Log10(musicSlider.value) * 20);
-            }
-            else
-            {
-                print("xd");
-            }
+                PlayerPrefs.SetFloat("music", GetMusicVolume());
+                mainAudioMixer.SetFloat("FxVolume", Mathf.Log10(fxSlider.value) * 20);
+                PlayerPrefs.SetFloat("fx", GetFxVolume());
+                PlayerPrefs.Save();
+                
 
+            }
         }
         // To test the musicVolume variable
         //mainAudioMixer.SetFloat("MusicVolume", Mathf.Log10(musicVolume) * 20);
     }
 
-
+    private void setVolume()
+    {
+        mainAudioMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat("music"));
+        mainAudioMixer.SetFloat("FxVolume", PlayerPrefs.GetFloat("fx"));
+        fxSlider.value = Mathf.Log10(PlayerPrefs.GetFloat("music"));
+        musicSlider.value = Mathf.Log10(PlayerPrefs.GetFloat("fx"));
+    }
     public void PlayMusic(string name)
     {
         Sound s = Array.Find(music, s => s.name == name);
@@ -142,6 +151,34 @@ public class AudioManager : MonoBehaviour
         else
         {
             Debug.LogWarning("Music " + name + " not found");
+        }
+    }
+    
+    public float GetMusicVolume()
+    {
+        float value;
+        bool result = mainAudioMixer.GetFloat("MusicVolume", out value);
+        if (result)
+        {
+            return value;
+        }
+        else
+        {
+            return 0f;
+        }
+    }
+
+    public float GetFxVolume()
+    {
+        float value;
+        bool result = mainAudioMixer.GetFloat("FxVolume", out value);
+        if (result)
+        {
+            return value;
+        }
+        else
+        {
+            return 0f;
         }
     }
 }

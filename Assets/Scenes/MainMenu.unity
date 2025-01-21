@@ -4010,6 +4010,10 @@ PrefabInstance:
       propertyPath: musicSlider
       value: 
       objectReference: {fileID: 297625609}
+    - target: {fileID: 5189847352973264170, guid: c20101f67afbf494fb815f3d54dc2c81, type: 3}
+      propertyPath: fx.Array.data[4].volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8984549492818139416, guid: c20101f67afbf494fb815f3d54dc2c81, type: 3}
       propertyPath: m_Name
       value: AudioManager
